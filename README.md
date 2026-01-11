@@ -1,54 +1,84 @@
-Airline Tweet Sentiment Dashboard
- Overview
+# Airline Tweet Sentiment Dashboard
 
-This project classifies tweets into Positive, Neutral, or Negative sentiment to enable quick analysis of customer feedback. It provides a browser-based dashboard with real-time sentiment predictions and analytics.
+##  Overview
+This project is an NLP-based web application that classifies airline-related tweets into
+Positive, Neutral, or Negative sentiment. It is designed to help analyze customer feedback
+and social media sentiment in real time.
 
- Built with Python, Scikit-Learn, NLP preprocessing, and Streamlit.
+The system follows a clean end-to-end pipeline:
+text preprocessing → feature extraction → model training → deployment.
 
- Problem
+---
 
-Airlines receive thousands of tweets daily. Automating sentiment analysis helps customer experience teams quickly identify negative trends and patterns.
+## Problem Statement
+Airlines receive a large volume of customer feedback through Twitter. Manually analyzing
+these tweets is time-consuming and inefficient. Automating sentiment classification helps
+identify negative trends, improve response time, and enhance customer experience.
 
- Approach
-🔹 Preprocessing
+---
 
-Lowercase conversion
+##  Approach
 
-Removal of noise (URLs, punctuation, stopwords)
+### 1. Text Preprocessing
+- Converted text to lowercase
+- Removed URLs, mentions, punctuation, and extra whitespace
+- Cleaned tweets to reduce noise before modeling
 
-TF-IDF vectorization
- Modeling
+### 2. Feature Engineering
+- Used TF-IDF vectorization to transform text into numerical features
+- Captured important words that influence sentiment classification
 
-Trained Logistic Regression and Linear SVM classifiers
+### 3. Modeling
+- Trained a Logistic Regression / Linear SVM classifier
+- Chosen for efficiency, interpretability, and strong performance on sparse TF-IDF features
 
-Evaluated with accuracy and confusion matrix
+### 4. Evaluation
+- Evaluated using accuracy and confusion matrix
+- Achieved ~0.91 accuracy on validation data
 
-Produced sentiment tags with confidence levels
+---
 
- Dashboard
+##  Web Application
+- Built with Streamlit
+- User can enter any tweet and receive:
+  - Predicted sentiment
+  - Confidence score
+- Simple and intuitive interface suitable for non-technical users
 
-Input form for live tweet classification
+---
 
-Displays sentiment probabilities and top insights
+##  Results
+- Sentiment Accuracy: 0.91
+- Fast inference suitable for real-time usage
 
- Metrics
+---
 
-Accuracy: 0.91
+##  How to Run Locally
 
-Consistent performance on test split
-
- Run Locally
-Install
+### Install dependencies
+```bash
 pip install -r requirements.txt
-
-Run
+Run the app
+bash
+Copy code
 streamlit run streamlit_app.py
-
-🔗 Demo & Source
+🔗 Project Links
 
 Live: [click me](https://airline-sentiment-dashboard-k9.streamlit.app/)
- 
 
 🛠 Tech Stack
+Python
 
-Python | Scikit-Learn | TF-IDF | NLP | Streamlit
+Pandas, NumPy
+
+Scikit-learn
+
+TF-IDF (NLP)
+
+Streamlit
+
+
+
+ 
+ 
+
