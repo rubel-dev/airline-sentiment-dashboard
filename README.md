@@ -1,4 +1,7 @@
 # Airline Tweet Sentiment Dashboard
+🔗 Project Links
+
+Live: [click me](https://airline-sentiment-dashboard-k9.streamlit.app/)
 
 ##  Overview
 This project is an NLP-based web application that classifies airline-related tweets into
@@ -62,9 +65,7 @@ Run the app
 bash
 Copy code
 streamlit run streamlit_app.py
-🔗 Project Links
 
-Live: [click me](https://airline-sentiment-dashboard-k9.streamlit.app/)
 
 🛠 Tech Stack
 Python
@@ -81,4 +82,5 @@ Streamlit
 
  
  
+
 
